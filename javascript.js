@@ -9,8 +9,7 @@ let getComputerChoice = () => {
     }
 }
 
-
-function playRound(userSelection, computerSelection){
+let playRound = (userSelection, computerSelection) => {
     if (userSelection == computerSelection) {
         return 'Tie'
     } else if ((userSelection == 'rock' && computerSelection == 'paper') || (userSelection == 'scissor' && computerSelection == 'rock') || (userSelection == 'paper' && computerSelection == 'scissor')){
@@ -18,10 +17,12 @@ function playRound(userSelection, computerSelection){
     } else if ((userSelection == 'rock' && computerSelection == 'scissor') || (userSelection == 'scissor' && computerSelection == 'paper') || (userSelection == 'paper' && computerSelection == 'rock')){
         return "User";
     }
-} 
+}
+// function playRound(userSelection, computerSelection){
+// } 
 
 
-function game() {
+let game = () => {
     let userScore = 0;
     let compScore = 0;
     for (let i = 0; i < 5; i++){
