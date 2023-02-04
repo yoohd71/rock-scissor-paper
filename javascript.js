@@ -8,12 +8,7 @@ let getComputerChoice = () => {
         return 'paper'
     }
 }
-// Commit 1: changed getcOmputerchoice() function with arrow function for better readbility
 
-let Computer = getComputerChoice();
-console.log(Computer)
-
-let User = prompt("What is your choice?").toLowerCase()
 
 function playRound(userSelection, computerSelection){
     if (userSelection == computerSelection) {
@@ -40,11 +35,11 @@ function game() {
         }
     }
     if (userScore > compScore){
-        console.log(`You won the computer by ${userScore-compScore} rounds!`);
+        return `You won the computer by ${userScore-compScore} rounds!`;
     } else if (userScore < compScore){
-        console.log(`Well.. you lost by ${compScore - userScore} rounds`)
+        return `Well.. you lost by ${compScore - userScore} rounds`;
     } else {
-        console.log('TIE')
+        return 'TIE'
     }
 }
 
