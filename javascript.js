@@ -25,9 +25,10 @@ function game() {
     let userScore = 0;
     let compScore = 0;
     for (let i = 0; i < 5; i++){
-        let userSelection = User;
-        let computerSelection = Computer;
+        let userSelection = prompt("What is your choice?").toLowerCase();
+        let computerSelection = getComputerChoice();
         let result = playRound(userSelection, computerSelection);
+        console.log(`Your choice: ${userSelection} Computer Choice: ${computerSelection}`)
         if (result == "Computer"){
             compScore++;
         } else if (result =="User"){
@@ -35,12 +36,12 @@ function game() {
         }
     }
     if (userScore > compScore){
-        return `You won the computer by ${userScore-compScore} rounds!`;
+        console.log(`You won the computer by ${userScore-compScore} rounds!`);
     } else if (userScore < compScore){
-        return `Well.. you lost by ${compScore - userScore} rounds`;
+        console.log(`Well.. you lost by ${compScore - userScore} rounds`);
     } else {
-        return 'TIE'
+        console.log('TIE');
     }
 }
 
-console.log(game())
+game()
